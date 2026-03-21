@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stavros Karipidis — Full-Stack Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="#" class="logo">SK<span class="accent">.</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="hero" class="hero">
+    <div class="container hero-inner">
+      <p class="hero-greeting">Hi, I'm</p>
+      <h1 class="hero-name">Stavros Karipidis</h1>
+      <p class="hero-title">Full-Stack Developer &amp; Freelancer</p>
+      <p class="hero-sub">I build production-grade web applications with <strong>Rust</strong>, <strong>React</strong>, and <strong>TypeScript</strong>.</p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-outline">Hire Me</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I'm a full-stack developer who builds <strong>high-performance, production-ready web applications</strong> from the ground up. I specialise in Rust backends and React frontends, delivering software that is fast, secure, and maintainable.</p>
+          <p>My flagship project, <strong>UniLearnIt</strong>, is a live SaaS private tutoring platform serving <strong>500+ university students yearly</strong> in Greece. I designed and built the entire stack: a 38,000-line Rust API, a React 19 SPA with 330+ components, real-time WebSocket chat, Stripe payments, video streaming, and CI/CD pipelines on Google Cloud.</p>
+          <p>I care deeply about code quality: zero <code>.unwrap()</code> calls in production Rust, DOMPurify-sanitised HTML, HMAC-verified webhooks, and structured logging with Prometheus metrics.</p>
+        </div>
+        <div class="about-stats">
+          <div class="stat"><span class="stat-number">38K+</span><span class="stat-label">Lines of Rust</span></div>
+          <div class="stat"><span class="stat-number">330+</span><span class="stat-label">React Components</span></div>
+          <div class="stat"><span class="stat-number">66+</span><span class="stat-label">API Endpoints</span></div>
+          <div class="stat"><span class="stat-number">500+</span><span class="stat-label">Users Yearly</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>Backend</h3>
+          <ul>
+            <li>Rust / Actix-web</li>
+            <li>MongoDB / Redis</li>
+            <li>REST API Design (OpenAPI)</li>
+            <li>WebSocket (Actor Model)</li>
+            <li>Stripe Payment Integration</li>
+            <li>SMTP Email (Lettre)</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>Frontend</h3>
+          <ul>
+            <li>React 19 / TypeScript</li>
+            <li>Redux Toolkit / RTK Query</li>
+            <li>Tailwind CSS / Radix UI</li>
+            <li>Vite / Vitest</li>
+            <li>React Hook Form / Zod</li>
+            <li>i18next (Localisation)</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>Infrastructure</h3>
+          <ul>
+            <li>Google Cloud Run</li>
+            <li>Firebase Hosting</li>
+            <li>Docker (Multi-stage)</li>
+            <li>GitHub Actions CI/CD</li>
+            <li>Google Cloud Storage</li>
+            <li>Prometheus Metrics</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>Security</h3>
+          <ul>
+            <li>AES-GCM Encryption</li>
+            <li>JWT / OAuth 2.0 (Google)</li>
+            <li>HMAC-SHA256 Webhooks</li>
+            <li>CORS Hardening</li>
+            <li>DOMPurify Sanitisation</li>
+            <li>Rate Limiting (Redis)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+
+      <div class="project-card">
+        <div class="project-header">
+          <h3>UniLearnIt</h3>
+          <span class="badge">Production SaaS</span>
+        </div>
+        <p class="project-tagline">A full-stack private tutoring platform serving 500+ university students yearly in Greece &mdash; built solo from scratch.</p>
+
+        <div class="project-body">
+          <div class="project-details">
+            <h4>What it does</h4>
+            <ul>
+              <li><strong>Real-time chat</strong> between students and tutors via WebSocket actors with Redis pub/sub for horizontal scaling</li>
+              <li><strong>Video streaming</strong> with DRM protection and per-user dynamic watermarks</li>
+              <li><strong>Stripe payment processing</strong> with semester-based pricing, webhook verification, and admin-toggleable billing</li>
+              <li><strong>Multi-role access control</strong> &mdash; Admin, Tutor, and Student dashboards with JWT-secured routes</li>
+              <li><strong>Zoom integration</strong> &mdash; automated webhook handling for lecture recordings with HMAC validation</li>
+              <li><strong>Course management</strong> &mdash; tables, PDF uploads with watermarking, file collections, rich text editing (Tiptap)</li>
+              <li><strong>Student enrollment system</strong> &mdash; department-based course discovery, enrollment requests, device management</li>
+              <li><strong>Admin panel</strong> &mdash; full CRUD for courses, users, pricing, universities, departments, and analytics</li>
+              <li><strong>Email service</strong> &mdash; bulk course announcements via SMTP with HTML templates</li>
+            </ul>
+
+            <h4>Architecture highlights</h4>
+            <ul>
+              <li>Domain-driven modular backend with 15+ feature modules</li>
+              <li><strong>Solved a CPU bottleneck</strong> &mdash; PDF-to-image conversion was blocking the server; redesigned the pipeline to upload PDFs asynchronously and convert in the background, cutting CPU cost significantly</li>
+              <li>CI/CD with GitHub Actions, Docker, and Google Cloud Run</li>
+              <li>Prometheus metrics and structured logging for production observability</li>
+            </ul>
+          </div>
+
+          <div class="project-tech">
+            <h4>Tech Stack</h4>
+            <div class="tech-tags">
+              <span class="tag">Rust</span>
+              <span class="tag">Actix-web</span>
+              <span class="tag">MongoDB</span>
+              <span class="tag">Redis</span>
+              <span class="tag">React 19</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Redux Toolkit</span>
+              <span class="tag">Tailwind CSS</span>
+              <span class="tag">Vite</span>
+              <span class="tag">Stripe</span>
+              <span class="tag">WebSocket</span>
+              <span class="tag">Google Cloud Run</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">Docker</span>
+              <span class="tag">GitHub Actions</span>
+              <span class="tag">Zoom API</span>
+              <span class="tag">Google OAuth</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- PAYZY -->
+      <div class="project-card" style="margin-top: 32px;">
+        <div class="project-header">
+          <h3>Payzy</h3>
+          <span class="badge">Fintech</span>
+        </div>
+        <p class="project-tagline">A mobile fintech application in Greece &mdash; contributed features within an existing engineering team.</p>
+        <div class="project-body">
+          <div class="project-details">
+            <h4>My contributions</h4>
+            <ul>
+              <li>Developed new features within a <strong>microservices architecture</strong></li>
+              <li>Worked across multiple Spring Boot services communicating via <strong>Kafka</strong> event streaming</li>
+              <li>Collaborated within an established team, integrating with existing APIs and business logic</li>
+            </ul>
+          </div>
+          <div class="project-tech">
+            <h4>Tech Stack</h4>
+            <div class="tech-tags">
+              <span class="tag">Java</span>
+              <span class="tag">Spring Boot</span>
+              <span class="tag">Microservices</span>
+              <span class="tag">Apache Kafka</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DOCUMENT GENERATOR -->
+      <div class="project-card" style="margin-top: 32px;">
+        <div class="project-header">
+          <h3>Document Generator</h3>
+          <span class="badge">Enterprise</span>
+        </div>
+        <p class="project-tagline">A high-throughput PDF generation service that replaced a legacy Ecrion system &mdash; capable of generating up to 300K documents.</p>
+        <div class="project-body">
+          <div class="project-details">
+            <h4>What I built</h4>
+            <ul>
+              <li>Created a service that <strong>generates PDFs on the fly</strong> dynamically with Java code, replacing the legacy Ecrion document services</li>
+              <li>Engineered for <strong>high throughput</strong> &mdash; capable of handling up to 300,000 PDF generations</li>
+              <li><strong>Optimised CPU cost</strong> through code-level performance improvements, reducing infrastructure spend</li>
+            </ul>
+          </div>
+          <div class="project-tech">
+            <h4>Tech Stack</h4>
+            <div class="tech-tags">
+              <span class="tag">Java</span>
+              <span class="tag">Spring Boot</span>
+              <span class="tag">PDF Generation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- GOV-WALLET -->
+      <div class="project-card" style="margin-top: 32px;">
+        <div class="project-header">
+          <h3>Gov-Wallet</h3>
+          <span class="badge">Government</span>
+        </div>
+        <p class="project-tagline">Digital ticketing and authentication system for football and basketball events in Greece.</p>
+        <div class="project-body">
+          <div class="project-details">
+            <h4>What I built</h4>
+            <ul>
+              <li>Designed the <strong>ticket authentication system</strong> for sports events across Greece</li>
+              <li>Implemented <strong>ticket transfers</strong> and <strong>personalisation</strong> &mdash; linking tickets to individuals</li>
+              <li>Built support for <strong>company and children tickets</strong> with specialised validation rules</li>
+              <li>Handled complex edge cases and tricky business scenarios around ticket ownership and access control</li>
+            </ul>
+          </div>
+          <div class="project-tech">
+            <h4>Tech Stack</h4>
+            <div class="tech-tags">
+              <span class="tag">Java</span>
+              <span class="tag">Spring Boot</span>
+              <span class="tag">Authentication</span>
+              <span class="tag">Ticketing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WHAT I OFFER -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">What I Can Build For You</h2>
+      <div class="offers-grid">
+        <div class="offer-card">
+          <div class="offer-icon">&#9881;</div>
+          <h3>Full-Stack Web Apps</h3>
+          <p>End-to-end development from database design to deployed frontend. APIs, dashboards, real-time features.</p>
+        </div>
+        <div class="offer-card">
+          <div class="offer-icon">&#9889;</div>
+          <h3>High-Performance APIs</h3>
+          <p>Rust-based backends that are fast, memory-safe, and production-hardened. REST or WebSocket.</p>
+        </div>
+        <div class="offer-card">
+          <div class="offer-icon">&#128274;</div>
+          <h3>Payment Integration</h3>
+          <p>Stripe, subscription billing, webhook handling, and admin controls. Battle-tested in production.</p>
+        </div>
+        <div class="offer-card">
+          <div class="offer-icon">&#9729;</div>
+          <h3>Cloud Deployment</h3>
+          <p>Docker, CI/CD pipelines, Google Cloud, Firebase. I ship code that stays running.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container contact-container">
+      <h2 class="section-title">Let's Work Together</h2>
+      <p class="contact-text">I'm available for freelance projects. Whether you need a full product built from scratch or help scaling an existing system, let's talk.</p>
+      <div class="contact-links">
+        <a href="mailto:stavroskaripidiss@gmail.com" class="btn btn-primary">Email Me</a>
+        <a href="https://github.com/stavroskaripidis" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/stavroskaripidis" class="btn btn-outline" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Stavros Karipidis. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
